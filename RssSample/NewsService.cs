@@ -95,7 +95,7 @@ namespace RssSample
                 Link = $"https://fake-cat-news.com/painting-cat-artist",
                 PubDate = DateTime.Now.AddDays(random.Next(-10, -1)),
                 Author = $"Админокот",
-                ImageUrl = $"/api/images/news9.png"
+                ImageUrl = $"/images/news9.png"
             });
             return news;
         }
