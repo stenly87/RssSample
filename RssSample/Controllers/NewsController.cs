@@ -13,7 +13,8 @@ namespace RssSample.Controllers
         {
             _newsService = newsService;
         }
-        [HttpGet]
+
+        [HttpPost]
         public ActionResult<IEnumerable<CatNews>> Get()
         {
             return Ok(_newsService.GetCatNews());
