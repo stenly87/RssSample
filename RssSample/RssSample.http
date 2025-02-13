@@ -1,0 +1,6 @@
+@RssSample_HostAddress = http://localhost:5028
+
+GET {{RssSample_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
