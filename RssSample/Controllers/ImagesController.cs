@@ -7,17 +7,10 @@ namespace RssSample.Controllers
     [ApiController]
     public class ImagesController : ControllerBase
     {
-        private readonly IWebHostEnvironment _env;
-
-        public ImagesController(IWebHostEnvironment env)
-        {
-            _env = env;
-        }
-
         [HttpGet("{imageName}")]
         public IActionResult GetImage(string imageName)
         {
-            var imagePath = Path.Combine(_env.WebRootPath, "images", imageName);
+            var imagePath = Path.Combine(Environment.CurrentDirectory, "wwwroot", "images", imageName);
 
             if (!System.IO.File.Exists(imagePath))
             {
