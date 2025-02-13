@@ -5,7 +5,7 @@ using System.Xml.Linq;
 
 namespace RssSample.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class RssController : ControllerBase
     {
@@ -19,7 +19,7 @@ namespace RssSample.Controllers
         [HttpGet]
         public IActionResult GetRssFeed()
         {
-            var newsItems = _newsService.GetNews();
+            var newsItems = _newsService.GetRssNews();
 
             var rss = new XElement("rss",
                 new XAttribute("version", "2.0"),
